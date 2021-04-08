@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+<title>Conversor de Unidades</title>
+
+<!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="keywords"
+	content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+<meta name="author" content="Codedthemes" />
+<!-- Favicon icon -->
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<!-- Google font-->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
+	rel="stylesheet">
+<!-- waves.css -->
+<link rel="stylesheet" href="assets/pages/waves/css/waves.min.css"
+	type="text/css" media="all">
+<!-- Required Fremwork -->
+<link rel="stylesheet" type="text/css"
+	href="assets/css/bootstrap/css/bootstrap.min.css">
+<!-- waves.css -->
+<link rel="stylesheet" href="assets/pages/waves/css/waves.min.css"
+	type="text/css" media="all">
+<!-- themify icon -->
+<link rel="stylesheet" type="text/css"
+	href="assets/icon/themify-icons/themify-icons.css">
+<!-- font-awesome-n -->
+<link rel="stylesheet" type="text/css"
+	href="assets/css/font-awesome-n.min.css">
+<link rel="stylesheet" type="text/css"
+	href="assets/css/font-awesome.min.css">
+<!-- scrollbar.css -->
+<link rel="stylesheet" type="text/css"
+	href="assets/css/jquery.mCustomScrollbar.css">
+<!-- Style.css -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<script type="text/javascript">
+	function calcular(){
+		var f    = document.getElementById("frm");
+		var valor = document.getElementById("valor").value;
+		var tipo =  document.getElementById("tipo").value;
+		var tipo2 =  document.getElementById("tipo2").value;
+		var result = document.getElementById("resultado").value;
+		
+		valor = valor.replace(",",".");
+		
+		if(tipo == "quilometro" && tipo2 == "metro"){
+			result = valor * 1000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "quilometro" && tipo2 == "centimetro"){
+			result = valor * 100000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "quilometro" && tipo2 == "milimetro"){
+			result = valor * 1000000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "quilometro" && tipo2 == "micrometro"){
+			result = valor * 1000000000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "quilometro" && tipo2 == "nanometro"){
+			result = valor * 1000000000000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "quilometro" && tipo2 == "milha"){
+			result = valor / 1.609;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "quilometro" && tipo2 == "jarda"){
+			result = valor * 1093.61;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "quilometro" && tipo2 == "pe"){
+			result = valor * 3280.84;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "pe" && tipo2 == "quilometro"){
+			result = valor / 3280.84;
+			result = result.toLocaleString('pt-br',{ minimumFractionDigits: 7 });
+			
+		}else if(tipo == "jarda" && tipo2 == "quilometro"){
+			result = valor / 1093.61;
+			result = result.toLocaleString('pt-br',{ minimumFractionDigits: 7 });
+			
+		}else if(tipo == "milha" && tipo2 == "quilometro"){
+			result = valor * 1.609;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "nanometro" && tipo2 == "quilometro"){
+			result = valor / 1000000000000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "micrometro" && tipo2 == "quilometro"){
+			result = valor / 1000000000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "milimetro" && tipo2 == "quilometro"){
+			result = valor / 1000000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "centimetro" && tipo2 == "quilometro"){
+			result = valor / 100000;
+			result = result.toLocaleString('pt-br');
+			
+		}else if(tipo == "metro" && tipo2 == "quilometro"){
+			result = valor / 1000;
+			result = result.toLocaleString('pt-br');
+			
+		}else{
+			result = "";
+		}
+		
+		document.getElementById("resultado").value = result;
+	}
+</script>
+
+</head>
+
+<body>
+	<!-- Pre-loader start -->
+	<div class="theme-loader">
+		<div class="loader-track">
+			<div class="preloader-wrapper">
+				<div class="spinner-layer spinner-blue">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+				<div class="spinner-layer spinner-red">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-yellow">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-green">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Pre-loader end -->
+	<div id="pcoded" class="pcoded">
+		<div class="pcoded-overlay-box"></div>
+		<div class="pcoded-container navbar-wrapper">
+			<nav class="navbar header-navbar pcoded-header">
+				<div class="navbar-wrapper">
+					<div class="navbar-logo">
+						<a class="mobile-menu waves-effect waves-light"
+							id="mobile-collapse" href="#!"> <i class="ti-menu"></i>
+						</a>
+						<div class="mobile-search waves-effect waves-light">
+							<div class="header-search">
+								<div class="main-search morphsearch-search">
+									<div class="input-group">
+										<span class="input-group-prepend search-close"><i
+											class="ti-close input-group-text"></i></span> <input type="text"
+											class="form-control" placeholder="Enter Keyword"> <span
+											class="input-group-append search-btn"><i
+											class="ti-search input-group-text"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="index.html"> Conversor de Unidades </a> <a
+							class="mobile-options waves-effect waves-light"> <i
+							class="ti-more"></i>
+						</a>
+					</div>
+
+				</div>
+			</nav>
+
+			<div class="pcoded-main-container">
+				<div class="pcoded-wrapper">
+					<nav class="pcoded-navbar">
+						<div class="sidebar_toggle">
+							<a href="#"><i class="icon-close icons"></i></a>
+						</div>
+						<div class="pcoded-inner-navbar main-menu">
+
+							<ul class="pcoded-item pcoded-left-item">
+								<li class=""><a href="index.html"
+									class="waves-effect waves-dark"> <span class="pcoded-micon"><i
+											class="ti-home"></i><b>D</b></span> <span class="pcoded-mtext">Inicio</span>
+										<span class="pcoded-mcaret"></span>
+								</a></li>
+							</ul>
+
+							<div class="pcoded-navigation-label">Tipos..</div>
+							<ul class="pcoded-item pcoded-left-item">
+								<li class="active "><a href="comprimento.html"
+									class="waves-effect waves-dark"> <span class="pcoded-micon"><i
+											class="ti-layers"></i><b>FC</b></span> <span class="pcoded-mtext">Comprimento</span>
+										<span class="pcoded-mcaret"></span>
+								</a></li>
+								<li class=""><a href="form-elements-component.html"
+									class="waves-effect waves-dark"> <span class="pcoded-micon"><i
+											class="ti-layers"></i><b>FC</b></span> <span class="pcoded-mtext">Volume</span>
+										<span class="pcoded-mcaret"></span>
+								</a></li>
+							</ul>
+
+						</div>
+					</nav>
+					<div class="pcoded-content">
+						<!-- Page-header start -->
+						<div class="page-header">
+							<div class="page-block">
+								<div class="row align-items-center">
+									<div class="col-md-8">
+										<div class="page-header-title">
+											<h5 class="m-b-10">Comprimento</h5>
+											<p class="m-b-0">As unidades de medidas de comprimento
+												surgem para suprir a necessidade do ser humano de medir
+												vários tipos de distâncias. Existem várias unidades de
+												medidas de comprimento, a utilizada no sistema internacional
+												de unidades é o metro, e seus múltiplos (quilômetro,
+												hectômetro e decâmetro) e submúltiplos (decímetro,
+												centímetro milímetro). Além das unidades de medidas de
+												comprimento apresentadas, existem outras como as que
+												utilizam o corpo como parâmetro: o palmo, o pé, a polegada.
+												Ainda, há aquelas que não são do sistema internacional, mas
+												são utilizadas a depender da região, como a légua, a jarda,
+												a milha e o ano-luz.</p>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- Page-header end -->
+
+						<div class="pcoded-inner-content">
+							<!-- Main-body start -->
+							<div class="main-body">
+								<div class="page-wrapper">
+									<!-- Page-body start -->
+									<div class="page-body">
+										<div class="row">
+
+											<div class="col-sm-12">
+												<div class="card">
+													<div class="card-header">
+														<h5>Conversão</h5>
+													</div>
+													<div class="card-block">
+														<form id="frm">
+															<div class="form-group row">
+																<label class="col-sm-2 col-form-label">Quero
+																	converter:</label>
+																<div class="col-sm-10">
+																	<select name="select" class="form-control" id="tipo" onchange="calcular()">
+																		<option value="opt1">Selecione uma opção</option>
+																		<option value="quilometro">Quilômetro</option>
+																		<option value="metro">Metro</option>
+																		<option value="centimetro">Centímetro</option>
+																		<option value="milimetro">Milímetro</option>
+																		<option value="micrometro">Micrômetro</option>
+																		<option value="nanometro">Nanômetro</option>
+																		<option value="milha">Milha</option>
+																		<option value="jarda">Jarda</option>
+																		<option value="pe">Pé</option>
+																		<option value="polegada">Polegada</option>
+																		<option value="milhanautica">Milha náuttica</option>
+
+																	</select>
+																</div>
+															</div>
+															
+															<div class="form-group row">
+																<label class="col-sm-2 col-form-label">Valor:</label>
+																<div class="col-sm-10">
+																	<input type="text" class="form-control" name="valor" 
+																		autocomplete="off" id="valor"  onkeyup="calcular()">
+																</div>
+															</div>
+															<div class="form-group row">
+																<label class="col-sm-2 col-form-label">Para:</label>
+																<div class="col-sm-10">
+																	<select name="select" class="form-control" id="tipo2" onchange="calcular()">
+																		<option value="opt1">Selecione uma opção</option>
+																		<option value="quilometro">Quilômetro</option>
+																		<option value="metro">Metro</option>
+																		<option value="centimetro">Centímetro</option>
+																		<option value="milimetro">Milímetro</option>
+																		<option value="micrometro">Micrômetro</option>
+																		<option value="nanometro">Nanômetro</option>
+																		<option value="milha">Milha</option>
+																		<option value="jarda">Jarda</option>
+																		<option value="pe">Pé</option>
+																		<option value="polegada">Polegada</option>
+																		<option value="milhanautica">Milha náuttica</option>
+																	</select>
+																</div>
+															</div>
+															<!--  
+															<button class="btn btn-inverse waves-effect waves-light">Converter</button>
+															-->
+															<div class="form-group row">
+																<label class="col-sm-2 col-form-label">Resultado:</label>
+																<div class="col-sm-10">
+																	<input type="text" class="form-control" id="resultado"
+																		autocomplete="off" disabled="disabled" style="font-weight:bold;">
+																</div>
+															</div>
+
+														</form>
+
+
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<!-- Page-body end -->
+								</div>
+								<div id="styleSelector"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Warning Section Starts -->
+	<!-- Older IE warning message -->
+	<!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+	<!-- Warning Section Ends -->
+
+	<!-- Required Jquery -->
+	<script type="text/javascript" src="assets/js/jquery/jquery.min.js "></script>
+	<script type="text/javascript"
+		src="assets/js/jquery-ui/jquery-ui.min.js "></script>
+	<script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
+	<script type="text/javascript"
+		src="assets/js/bootstrap/js/bootstrap.min.js "></script>
+	<!-- waves js -->
+	<script src="assets/pages/waves/js/waves.min.js"></script>
+	<!-- jquery slimscroll js -->
+	<script type="text/javascript"
+		src="assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+	<!-- slimscroll js -->
+	<script src="assets/js/jquery.mCustomScrollbar.concat.min.js "></script>
+
+	<!-- menu js -->
+	<script src="assets/js/pcoded.min.js"></script>
+	<script src="assets/js/vertical/vertical-layout.min.js "></script>
+
+	<script type="text/javascript" src="assets/js/script.js "></script>
+
+</body>
+
+</html>
