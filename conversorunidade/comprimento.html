@@ -2,6 +2,21 @@
 <html lang="pt">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-53CQBDN');</script>
+  <!-- End Google Tag Manager -->
+
+<script data-ad-client="ca-pub-3925364440483118" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<style>
+div > p {
+  text-indent: 30px;
+  line-height: 1.6;
+}
+</style>
 <title>Conversor de Unidades</title>
 
 <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
@@ -16,9 +31,9 @@
 	content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<meta name="keywords"
-	content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
-<meta name="author" content="Codedthemes" />
+<meta name="author" content="Dw Equipamentos e Solucoes" />
+<meta name="keywords" content="converter cm, converter metro, converter quilometro, converter comprimento, converter polegada, converter nanometro, converter milimetro, converter jarda, converter micrometro, converter medida comprimento" />
+<meta name="description" content="Pagina destinada para conversão de unidade de medida de comprimento, como por exemplo metro, centimetros, milimetros etc." />
 <!-- Favicon icon -->
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 <!-- Google font-->
@@ -55,77 +70,77 @@
 		var tipo =  document.getElementById("tipo").value;
 		var tipo2 =  document.getElementById("tipo2").value;
 		var result = document.getElementById("resultado").value;
-		
+
 		valor = valor.replace(",",".");
-		
+
 		if(tipo == "quilometro" && tipo2 == "metro"){
 			result = valor * 1000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "quilometro" && tipo2 == "centimetro"){
 			result = valor * 100000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "quilometro" && tipo2 == "milimetro"){
 			result = valor * 1000000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "quilometro" && tipo2 == "micrometro"){
 			result = valor * 1000000000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "quilometro" && tipo2 == "nanometro"){
 			result = valor * 1000000000000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "quilometro" && tipo2 == "milha"){
 			result = valor / 1.609;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "quilometro" && tipo2 == "jarda"){
 			result = valor * 1093.61;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "quilometro" && tipo2 == "pe"){
 			result = valor * 3280.84;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "pe" && tipo2 == "quilometro"){
 			result = valor / 3280.84;
 			result = result.toLocaleString('pt-br',{ minimumFractionDigits: 7 });
-			
+
 		}else if(tipo == "jarda" && tipo2 == "quilometro"){
 			result = valor / 1093.61;
 			result = result.toLocaleString('pt-br',{ minimumFractionDigits: 7 });
-			
+
 		}else if(tipo == "milha" && tipo2 == "quilometro"){
 			result = valor * 1.609;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "nanometro" && tipo2 == "quilometro"){
 			result = valor / 1000000000000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "micrometro" && tipo2 == "quilometro"){
 			result = valor / 1000000000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "milimetro" && tipo2 == "quilometro"){
 			result = valor / 1000000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "centimetro" && tipo2 == "quilometro"){
 			result = valor / 100000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else if(tipo == "metro" && tipo2 == "quilometro"){
 			result = valor / 1000;
 			result = result.toLocaleString('pt-br');
-			
+
 		}else{
 			result = "";
 		}
-		
+
 		document.getElementById("resultado").value = result;
 	}
 </script>
@@ -133,6 +148,11 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53CQBDN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 	<!-- Pre-loader start -->
 	<div class="theme-loader">
 		<div class="loader-track">
@@ -238,12 +258,7 @@
 							<ul class="pcoded-item pcoded-left-item">
 								<li class="active "><a href="comprimento.html"
 									class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-											class="ti-layers"></i><b>FC</b></span> <span class="pcoded-mtext">Comprimento</span>
-										<span class="pcoded-mcaret"></span>
-								</a></li>
-								<li class=""><a href="form-elements-component.html"
-									class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-											class="ti-layers"></i><b>FC</b></span> <span class="pcoded-mtext">Volume</span>
+											class="ti-ruler"></i><b>FC</b></span> <span class="pcoded-mtext">Comprimento</span>
 										<span class="pcoded-mcaret"></span>
 								</a></li>
 							</ul>
@@ -260,19 +275,18 @@
 											<h5 class="m-b-10">Comprimento</h5>
 											<p class="m-b-0">As unidades de medidas de comprimento
 												surgem para suprir a necessidade do ser humano de medir
-												vários tipos de distâncias. Existem várias unidades de
-												medidas de comprimento, a utilizada no sistema internacional
-												de unidades é o metro, e seus múltiplos (quilômetro,
-												hectômetro e decâmetro) e submúltiplos (decímetro,
-												centímetro milímetro). Além das unidades de medidas de
-												comprimento apresentadas, existem outras como as que
-												utilizam o corpo como parâmetro: o palmo, o pé, a polegada.
-												Ainda, há aquelas que não são do sistema internacional, mas
-												são utilizadas a depender da região, como a légua, a jarda,
-												a milha e o ano-luz.</p>
+												vários tipos de distâncias.</p>
 										</div>
 									</div>
-
+									<div class="col-md-4">
+											<ul class="breadcrumb">
+													<li class="breadcrumb-item">
+															<a href="index.html"> <i class="fa fa-home"></i> </a>
+													</li>
+													<li class="breadcrumb-item"><a href="index.html">Inicio</a>
+													</li>
+											</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -286,7 +300,12 @@
 									<!-- Page-body start -->
 									<div class="page-body">
 										<div class="row">
-
+											<p>
+												As medidas de comprimento são mecanismos de medição eficazes, uma vez que utilizam como recurso medidas convencionais, tais como milímetro, centímetro, metro, quilômetro. Entre as unidades de medida de comprimento existentes, a que é considerada oficial pelo Sistema Internacional de Unidades (SI) é o metro.
+											</p>
+											<p>
+												Elas foram criadas justamente para mitigar a probabilidade de ocorrência de erros no momento em que era necessário mensurar as coisas. Abaixo é possível realizar a conversão de alguns tipos de de medidas de comprimento.
+											</p>
 											<div class="col-sm-12">
 												<div class="card">
 													<div class="card-header">
@@ -315,11 +334,11 @@
 																	</select>
 																</div>
 															</div>
-															
+
 															<div class="form-group row">
 																<label class="col-sm-2 col-form-label">Valor:</label>
 																<div class="col-sm-10">
-																	<input type="text" class="form-control" name="valor" 
+																	<input type="text" class="form-control" name="valor"
 																		autocomplete="off" id="valor"  onkeyup="calcular()">
 																</div>
 															</div>
@@ -342,7 +361,7 @@
 																	</select>
 																</div>
 															</div>
-															<!--  
+															<!--
 															<button class="btn btn-inverse waves-effect waves-light">Converter</button>
 															-->
 															<div class="form-group row">
@@ -352,9 +371,7 @@
 																		autocomplete="off" disabled="disabled" style="font-weight:bold;">
 																</div>
 															</div>
-
 														</form>
-
 
 													</div>
 												</div>
